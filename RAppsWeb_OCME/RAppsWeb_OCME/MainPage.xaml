@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:RAppsWeb_OCME"
+             x:Class="RAppsWeb_OCME.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:MainPage />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+
+        <Label Text="Monto de la cuenta" />
+        <Entry Keyboard="Numeric" Text="{Binding MontoCuenta}" />
+
+        <Label Text="Porcentaje de propina" />
+        <Entry Keyboard="Numeric" Text="{Binding PorcentajePropina}" />
+
+        <Label Text="Número de personas" />
+        <Entry Keyboard="Numeric" Text="{Binding NumeroPersonas}" />
+
+        <Label Text="Monto total a pagar" />
+        <Label Text="{Binding TotalPagar, StringFormat='Total a pagar: {0:C}'}" />
+
+        <Label Text="Monto por persona" />
+        <Label Text="{Binding MontoPorPersona, StringFormat='Monto por persona: {0:C}'}" />
+
+        <Label Text="Propina calculada" />
+        <Label Text="{Binding TotalPropina, StringFormat='Propina: {0:C}'}" />
+
+        <Image Source="{Binding Carita}" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+
+    </StackLayout>
+</ContentPage>
