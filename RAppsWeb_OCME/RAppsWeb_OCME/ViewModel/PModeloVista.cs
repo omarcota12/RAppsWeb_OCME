@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace RAppsWeb_OCME.ViewModel
 {
-    public partial class PModeloVista : INotifyPropertyChanged
+    public class PModeloVista : INotifyPropertyChanged
     {
         private double _montoCuenta;
         private double _porcentajePropina;
